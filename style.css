@@ -1,3 +1,18 @@
+html,
+body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
 header,
 main,
 footer {
@@ -17,5 +32,14 @@ section.form {
 header,
 .form,
 main {
-  margin-bottom: 70pxt;
+  margin-bottom: 70px;
+  width: 90%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header h1,
+main h2 {
+  margin-bottom: 70px;
 }
