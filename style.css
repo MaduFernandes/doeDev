@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -7,10 +11,17 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
 }
 
-footer {
-  margin-top: auto;
+header h1,
+main h2 {
+  margin-bottom: 70px;
+}
+
+.logo {
+  margin: 60px 0;
 }
 
 header,
@@ -19,14 +30,40 @@ footer {
   text-align: center;
 }
 
-section.donors {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+main h2 span {
+  color: lightcoral;
 }
 
 section.form {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 45px;
+  background-color: lightpink;
+  padding: 16px 64px;
+  align-items: center;
+  border-radius: 6px;
+}
+
+form input,
+form button {
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px lightcoral solid;
+}
+
+form button {
+  background-color: lightcoral;
+  color: white;
+  font-weight: bold;
+}
+
+.form h2 {
+  text-align: right;
+  margin-right: 50px;
+  color: #ffffffee;
+  font-size: 18px;
 }
 
 header,
@@ -39,7 +76,49 @@ main {
   margin-right: auto;
 }
 
-header h1,
-main h2 {
-  margin-bottom: 70px;
+header button {
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: none;
+  color: white;
+  background-color: lightcoral;
+  font-weight: bold;
+}
+
+main .donors {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.blood {
+  color: #ff4f4f;
+  font-weight: bold;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.blood::before {
+  content: "";
+  background-color: #ff4f4f88;
+
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+
+  /*gotinha*/
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+}
+
+footer {
+  margin-top: auto;
+  padding: 16px;
+  border: 1px solid #eee;
 }
